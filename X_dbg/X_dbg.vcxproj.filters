@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\commands">
+      <UniqueIdentifier>{33ecc2a0-1210-42e7-a7c6-263a4fa4c6f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="X_dbg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="exprfunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stringformat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="formatfunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\cmd-debug-control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="animate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="historycontext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="database.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commandline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filehelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="handle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xrefs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="watch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filemap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GetPeArch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="jit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="debugger_tracing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="symbolundecorator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commands\cmd-watch-control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="debugger_cookie.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="simplescript.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="symbolsourcedia.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pdbdiafile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pdbdiatypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_dbgfunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_global.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="assemble.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\recursiveanalysis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="analysis\analysis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_scriptapi_gui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_scriptapi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_scriptapi_misc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd-breakpoint-control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_exports.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WinInet-Downloader\downslib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mnemonichelp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="handles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tcpconnections.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="taskthread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="_plugins.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd-plugins.h">
+      <Filter>源文件\commands</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="X_dbg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="variable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="value.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TraceRecord.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="threading.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="thread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="symcache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="symbolsourcebase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="symbolinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stackinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin_loader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="patches.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="msgqueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="module.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="memory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="loop.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="label.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="expressionparser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="expressionfunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="exhandlerinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="exception.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="encodemap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="disasm_helper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="disasm_fast.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="debugger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dbghelp_safe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datainst_helper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="console.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="comment.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="commandparser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="command.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bookmark.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="argument.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="addrinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_plugins.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_global.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_exports.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="exprfunc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stringformat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="formatfunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stringutils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="murmurhash.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="animate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="historycontext.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="database.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="commandline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filehelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xrefs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="watch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="simplescript.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="symbolsourcedia.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pdbdiafile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="msdia\diacreate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_dbgfunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="assemble.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="analysis\recursiveanalysis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="analysis\analysis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_scriptapi_misc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="_scriptapi_gui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WinInet-Downloader\downslib.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mnemonichelp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="handles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpconnections.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-debug-control.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-undocumentedcpp.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-watch-control.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-gui.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-breakpoint-control.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-tracing.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-conditional-breakpoint-control.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="commands\cmd-searching.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="reference.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="patternfind.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cmd-plugins.cpp">
+      <Filter>源文件\commands</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

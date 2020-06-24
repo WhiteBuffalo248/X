@@ -1,0 +1,31 @@
+#include "_global.h"
+
+
+
+GUIGUIINIT _gui_guiinit;
+GUITRANSLATETEXT _gui_translate_text;
+GUISENDMESSAGE _gui_sendmessage;
+
+
+DBGDBGINIT _dbg_dbginit;
+DBGISDEBUGGING _dbg_isdebugging;
+DBGMEMISVALIDREADPTR _dbg_memisvalidreadptr;
+DBGADDRINFOGET _dbg_addrinfoget;
+DBGMEMREAD _dbg_memread;
+DBGMEMWRITE _dbg_memwrite;
+DBGSENDMESSAGE _dbg_sendmessage;
+DBGGETBRANCHDESTINATION _dbg_getbranchdestination;
+DBGISJUMPGOINGTOEXECUTE _dbg_isjumpgoingtoexecute;
+DBGGETREGDUMP _dbg_getregdump;
+DBGDBGCMDEXEC _dbg_dbgcmdexec;
+DBGDBGCMDEXECDIRECT _dbg_dbgcmddirectexec;
+DBGBPGETTYPEAT _dbg_bpgettypeat;
+DBGMEMFINDBASEADDR _dbg_memfindbaseaddr;
+DBGVALFROMSTRING _dbg_valfromstring;
+DBGENCODETYPESET _dbg_encodetypeset;
+DBGGETBPLIST _dbg_getbplist;
+DBGDBGEXITSIGNAL _dbg_dbgexitsignal;
+DBGVALTOSTRING _dbg_valtostring;
+
+
+

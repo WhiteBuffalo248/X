@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B865482B-976B-49C5-A750-E4046945871D}</ProjectGuid>
+    <RootNamespace>X_dbg</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <TargetName>x32dbg</TargetName>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <TargetName>x64dbg</TargetName>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>x32dbg</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <TargetExt>.dll</TargetExt>
+    <TargetName>x64dbg</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>BUILD_DBG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MinimalRebuild>true</MinimalRebuild>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)commands;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>yara\yara_x86.lib;XEDParse\XEDParse_x86.lib;shlwapi.lib;psapi.lib;TitanEngine\TitanEngine_x86.lib;jansson\jansson_x86.lib;$(ProjectDir)..\zydis_wrapper\bin\x32d\zydis_wrapper.lib;dbghelp\dbghelp_x86.lib;ntdll\ntdll_x86.lib;lz4\lz4_x86.lib;DeviceNameResolver\DeviceNameResolver_x86.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>BUILD_DBG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessToFile>false</PreprocessToFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)commands;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>yara\yara_x64.lib;XEDParse\XEDParse_x64.lib;shlwapi.lib;psapi.lib;TitanEngine\TitanEngine_x64.lib;jansson\jansson_x64.lib;$(ProjectDir)..\zydis_wrapper\bin\x64d\zydis_wrapper.lib;dbghelp\dbghelp_x64.lib;ntdll\ntdll_x64.lib;lz4\lz4_x64.lib;DeviceNameResolver\DeviceNameResolver_x64.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>BUILD_DBG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)commands;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include;$(IncludePath);</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>yara\yara_x86.lib;XEDParse\XEDParse_x86.lib;shlwapi.lib;psapi.lib;TitanEngine\TitanEngine_x86.lib;jansson\jansson_x86.lib;$(ProjectDir)..\zydis_wrapper\bin\x32\zydis_wrapper.lib;dbghelp\dbghelp_x86.lib;ntdll\ntdll_x86.lib;lz4\lz4_x86.lib;DeviceNameResolver\DeviceNameResolver_x86.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)commands;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;%(PreprocessorDefinitions);BUILD_DBG</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>yara\yara_x64.lib;XEDParse\XEDParse_x64.lib;shlwapi.lib;psapi.lib;TitanEngine\TitanEngine_x64.lib;jansson\jansson_x64.lib;$(ProjectDir)..\zydis_wrapper\bin\x64\zydis_wrapper.lib;dbghelp\dbghelp_x64.lib;ntdll\ntdll_x64.lib;lz4\lz4_x64.lib;DeviceNameResolver\DeviceNameResolver_x64.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="analysis\analysis.h" />
+    <ClInclude Include="analysis\recursiveanalysis.h" />
+    <ClInclude Include="animate.h" />
+    <ClInclude Include="assemble.h" />
+    <ClInclude Include="breakpoint.h" />
+    <ClInclude Include="cmd-breakpoint-control.h" />
+    <ClInclude Include="cmd-plugins.h" />
+    <ClInclude Include="commandline.h" />
+    <ClInclude Include="commands\cmd-debug-control.h" />
+    <ClInclude Include="commands\cmd-watch-control.h" />
+    <ClInclude Include="database.h" />
+    <ClInclude Include="debugger_cookie.h" />
+    <ClInclude Include="debugger_tracing.h" />
+    <ClInclude Include="exprfunc.h" />
+    <ClInclude Include="filehelper.h" />
+    <ClInclude Include="filemap.h" />
+    <ClInclude Include="formatfunctions.h" />
+    <ClInclude Include="GetPeArch.h" />
+    <ClInclude Include="handle.h" />
+    <ClInclude Include="handles.h" />
+    <ClInclude Include="historycontext.h" />
+    <ClInclude Include="jit.h" />
+    <ClInclude Include="mnemonichelp.h" />
+    <ClInclude Include="pdbdiafile.h" />
+    <ClInclude Include="pdbdiatypes.h" />
+    <ClInclude Include="simplescript.h" />
+    <ClInclude Include="stringformat.h" />
+    <ClInclude Include="symbolsourcedia.h" />
+    <ClInclude Include="symbolundecorator.h" />
+    <ClInclude Include="taskthread.h" />
+    <ClInclude Include="tcpconnections.h" />
+    <ClInclude Include="thread.h" />
+    <ClInclude Include="watch.h" />
+    <ClInclude Include="WinInet-Downloader\downslib.h" />
+    <ClInclude Include="xrefs.h" />
+    <ClInclude Include="X_dbg.h" />
+    <ClInclude Include="_dbgfunctions.h" />
+    <ClInclude Include="_exports.h" />
+    <ClInclude Include="_global.h" />
+    <ClInclude Include="_plugins.h" />
+    <ClInclude Include="_scriptapi.h" />
+    <ClInclude Include="_scriptapi_gui.h" />
+    <ClInclude Include="_scriptapi_misc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="addrinfo.cpp" />
+    <ClCompile Include="analysis\analysis.cpp" />
+    <ClCompile Include="analysis\recursiveanalysis.cpp" />
+    <ClCompile Include="animate.cpp" />
+    <ClCompile Include="argument.cpp" />
+    <ClCompile Include="assemble.cpp" />
+    <ClCompile Include="bookmark.cpp" />
+    <ClCompile Include="breakpoint.cpp" />
+    <ClCompile Include="cmd-plugins.cpp" />
+    <ClCompile Include="command.cpp" />
+    <ClCompile Include="commandline.cpp" />
+    <ClCompile Include="commandparser.cpp" />
+    <ClCompile Include="commands\cmd-breakpoint-control.cpp" />
+    <ClCompile Include="commands\cmd-conditional-breakpoint-control.cpp" />
+    <ClCompile Include="commands\cmd-debug-control.cpp" />
+    <ClCompile Include="commands\cmd-gui.cpp" />
+    <ClCompile Include="commands\cmd-searching.cpp" />
+    <ClCompile Include="commands\cmd-tracing.cpp" />
+    <ClCompile Include="commands\cmd-undocumentedcpp.cpp" />
+    <ClCompile Include="commands\cmd-watch-control.cpp" />
+    <ClCompile Include="comment.cpp" />
+    <ClCompile Include="console.cpp" />
+    <ClCompile Include="database.cpp" />
+    <ClCompile Include="datainst_helper.cpp" />
+    <ClCompile Include="dbghelp_safe.cpp" />
+    <ClCompile Include="debugger.cpp" />
+    <ClCompile Include="disasm_fast.cpp" />
+    <ClCompile Include="disasm_helper.cpp" />
+    <ClCompile Include="encodemap.cpp" />
+    <ClCompile Include="exception.cpp" />
+    <ClCompile Include="exhandlerinfo.cpp" />
+    <ClCompile Include="expressionfunctions.cpp" />
+    <ClCompile Include="expressionparser.cpp" />
+    <ClCompile Include="exprfunc.cpp" />
+    <ClCompile Include="filehelper.cpp" />
+    <ClCompile Include="formatfunctions.cpp" />
+    <ClCompile Include="function.cpp" />
+    <ClCompile Include="handles.cpp" />
+    <ClCompile Include="historycontext.cpp" />
+    <ClCompile Include="jit.cpp" />
+    <ClCompile Include="label.cpp" />
+    <ClCompile Include="loop.cpp" />
+    <ClCompile Include="memory.cpp" />
+    <ClCompile Include="mnemonichelp.cpp" />
+    <ClCompile Include="module.cpp" />
+    <ClCompile Include="msdia\diacreate.cpp" />
+    <ClCompile Include="msgqueue.cpp" />
+    <ClCompile Include="murmurhash.cpp" />
+    <ClCompile Include="patches.cpp" />
+    <ClCompile Include="patternfind.cpp" />
+    <ClCompile Include="pdbdiafile.cpp" />
+    <ClCompile Include="plugin_loader.cpp" />
+    <ClCompile Include="reference.cpp" />
+    <ClCompile Include="simplescript.cpp" />
+    <ClCompile Include="stackinfo.cpp" />
+    <ClCompile Include="stringformat.cpp" />
+    <ClCompile Include="stringutils.cpp" />
+    <ClCompile Include="symbolinfo.cpp" />
+    <ClCompile Include="symbolsourcebase.cpp" />
+    <ClCompile Include="symbolsourcedia.cpp" />
+    <ClCompile Include="symcache.cpp" />
+    <ClCompile Include="tcpconnections.cpp" />
+    <ClCompile Include="thread.cpp" />
+    <ClCompile Include="threading.cpp" />
+    <ClCompile Include="TraceRecord.cpp" />
+    <ClCompile Include="value.cpp" />
+    <ClCompile Include="variable.cpp" />
+    <ClCompile Include="watch.cpp" />
+    <ClCompile Include="WinInet-Downloader\downslib.cpp" />
+    <ClCompile Include="xrefs.cpp" />
+    <ClCompile Include="X_dbg.cpp" />
+    <ClCompile Include="_dbgfunctions.cpp" />
+    <ClCompile Include="_exports.cpp" />
+    <ClCompile Include="_global.cpp" />
+    <ClCompile Include="_plugins.cpp" />
+    <ClCompile Include="_scriptapi_gui.cpp" />
+    <ClCompile Include="_scriptapi_misc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bridge\bridge.vcxproj">
+      <Project>{8e1a59bc-d507-4fdf-a765-1a0c6de7d5bf}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

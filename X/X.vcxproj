@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{17ACB169-AF7F-4660-B547-FF5F301F9E79}</ProjectGuid>
+    <RootNamespace>X</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\Rule Sets\NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <TargetName>X-64</TargetName>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <TargetName>X-64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;BUILD_DBG;BUILD_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(ProjectDir);Bridge;Utils;Disassembler;ThirdPartyLibs;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ThirdPartyLibs\ldconvert\ldconvert_x86.lib;$(ProjectDir)..\zydis_wrapper\bin\x32d\zydis_wrapper.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;BUILD_LIB;CRT_DEBUG_TRACE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(ProjectDir);Bridge;Utils;Disassembler;ThirdPartyLibs;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>ThirdPartyLibs\ldconvert\ldconvert_x64.lib;$(ProjectDir)..\zydis_wrapper\bin\x64d\zydis_wrapper.lib</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BUILD_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(ProjectDir);Bridge;Utils;Disassembler;ThirdPartyLibs;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ThirdPartyLibs\ldconvert\ldconvert_x86.lib;$(ProjectDir)..\zydis_wrapper\bin\x32\zydis_wrapper.lib</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>BUILD_LIB;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(ProjectDir);Bridge;Utils;Disassembler;ThirdPartyLibs;$(ProjectDir)..\zydis_wrapper;$(ProjectDir)..\zydis_wrapper\zydis\include;</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ThirdPartyLibs\ldconvert\ldconvert_x64.lib;$(ProjectDir)..\zydis_wrapper\bin\x64\zydis_wrapper.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbstractSearchList.h" />
+    <ClInclude Include="AbstractStdTable.h" />
+    <ClInclude Include="AbstractTableView.h" />
+    <ClInclude Include="AddMsgThread.h" />
+    <ClInclude Include="Breakpoints.h" />
+    <ClInclude Include="BreakPointsManage.h" />
+    <ClInclude Include="BreakPointsManagePane.h" />
+    <ClInclude Include="ChildView.h" />
+    <ClInclude Include="cJSON\cJSON.h" />
+    <ClInclude Include="CloseDlg.h" />
+    <ClInclude Include="CmdBar.h" />
+    <ClInclude Include="CmdEdit.h" />
+    <ClInclude Include="CmdListBox.h" />
+    <ClInclude Include="CmdScriptTypeComboBox.h" />
+    <ClInclude Include="CPUInfoBox.h" />
+    <ClInclude Include="CPUSideBar.h" />
+    <ClInclude Include="CPUStack.h" />
+    <ClInclude Include="CPUStackPane.h" />
+    <ClInclude Include="CTR_DBG2.h" />
+    <ClInclude Include="DebugThreadClose.h" />
+    <ClInclude Include="Disassembler\capstone_gui.h" />
+    <ClInclude Include="Disassembler\QBeaEngine.h" />
+    <ClInclude Include="Disassembly.h" />
+    <ClInclude Include="Exports.h" />
+    <ClInclude Include="HandlesPane.h" />
+    <ClInclude Include="HandleTable.h" />
+    <ClInclude Include="HexDump.h" />
+    <ClInclude Include="Imports.h" />
+    <ClInclude Include="InstructTrace.h" />
+    <ClInclude Include="InstructTraceBrowserDlg.h" />
+    <ClInclude Include="InstructTracePane.h" />
+    <ClInclude Include="LineEditDlg.h" />
+    <ClInclude Include="LogPane.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="CPUDump.h" />
+    <ClInclude Include="MemoryPane.h" />
+    <ClInclude Include="Memory\MemoryPage.h" />
+    <ClInclude Include="MessagesBPDlg.h" />
+    <ClInclude Include="MSMLinksBarButton.h" />
+    <ClInclude Include="MyByteArray.h" />
+    <ClInclude Include="MyHeaderCtrl.h" />
+    <ClInclude Include="MyListCtrl.h" />
+    <ClInclude Include="MyProgressCtrl.h" />
+    <ClInclude Include="MyRecentFileList.h" />
+    <ClInclude Include="MyStatic.h" />
+    <ClInclude Include="MyStatuBar.h" />
+    <ClInclude Include="MyTabCtrl.h" />
+    <ClInclude Include="MyToolBar.h" />
+    <ClInclude Include="OptionDlg.h" />
+    <ClInclude Include="OutputBox.h" />
+    <ClInclude Include="PeInfoPane.h" />
+    <ClInclude Include="GlobalID.h" />
+    <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="ReferencesPane.h" />
+    <ClInclude Include="ReferenceTable.h" />
+    <ClInclude Include="RegistersPane.h" />
+    <ClInclude Include="RegistersView.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SearchDlg.h" />
+    <ClInclude Include="SettingsX.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StdTable.h" />
+    <ClInclude Include="T.h" />
+    <ClInclude Include="TableVessel.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="DisasmPane.h" />
+    <ClInclude Include="TraceConditionDlg.h" />
+    <ClInclude Include="TraceEdit.h" />
+    <ClInclude Include="TraceFileReader.h" />
+    <ClInclude Include="TraceFileReaderInternal.h" />
+    <ClInclude Include="TrueColorToolBar.h" />
+    <ClInclude Include="Utils\CodeFolding.h" />
+    <ClInclude Include="Utils\Configuration.h" />
+    <ClInclude Include="Utils\EncodeMap.h" />
+    <ClInclude Include="Utils\RichTextPainter.h" />
+    <ClInclude Include="Utils\StringUtil.h" />
+    <ClInclude Include="WordEditDlg.h" />
+    <ClInclude Include="X.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AbstractStdTable.cpp" />
+    <ClCompile Include="AbstractTableView.cpp" />
+    <ClCompile Include="AddMsgThread.cpp" />
+    <ClCompile Include="Breakpoints.cpp" />
+    <ClCompile Include="BreakPointsManage.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Include="BreakPointsManagePane.cpp" />
+    <ClCompile Include="Bridge\Bridge.cpp" />
+    <ClCompile Include="Bridge\BridgeResult.cpp" />
+    <ClCompile Include="ChildView.cpp" />
+    <ClCompile Include="cJSON\cJSON.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CloseDlg.cpp" />
+    <ClCompile Include="CmdBar.cpp" />
+    <ClCompile Include="CmdEdit.cpp" />
+    <ClCompile Include="CmdListBox.cpp" />
+    <ClCompile Include="CmdScriptTypeComboBox.cpp" />
+    <ClCompile Include="CPUInfoBox.cpp" />
+    <ClCompile Include="CPUSideBar.cpp" />
+    <ClCompile Include="CPUStack.cpp" />
+    <ClCompile Include="CPUStackPane.cpp" />
+    <ClCompile Include="CRT_DBG2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DebugThreadClose.cpp" />
+    <ClCompile Include="Disassembler\capstone_gui.cpp" />
+    <ClCompile Include="Disassembler\QBeaEngine.cpp" />
+    <ClCompile Include="Disassembly.cpp" />
+    <ClCompile Include="HandlesPane.cpp" />
+    <ClCompile Include="HandleTable.cpp" />
+    <ClCompile Include="HexDump.cpp" />
+    <ClCompile Include="InstructTrace.cpp" />
+    <ClCompile Include="InstructTraceBrowserDlg.cpp" />
+    <ClCompile Include="InstructTracePane.cpp" />
+    <ClCompile Include="LineEditDlg.cpp" />
+    <ClCompile Include="LogPane.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="CPUDump.cpp" />
+    <ClCompile Include="MemoryPane.cpp" />
+    <ClCompile Include="Memory\MemoryPage.cpp" />
+    <ClCompile Include="MessagesBPDlg.cpp" />
+    <ClCompile Include="MSMLinksBarButton.cpp" />
+    <ClCompile Include="MyByteArray.cpp" />
+    <ClCompile Include="MyHeaderCtrl.cpp" />
+    <ClCompile Include="MyListCtrl.cpp" />
+    <ClCompile Include="MyProgressCtrl.cpp" />
+    <ClCompile Include="MyRecentFileList.cpp" />
+    <ClCompile Include="MyStatic.cpp" />
+    <ClCompile Include="MyStatuBar.cpp" />
+    <ClCompile Include="MyTabCtrl.cpp" />
+    <ClCompile Include="MyToolBar.cpp" />
+    <ClCompile Include="OptionDlg.cpp" />
+    <ClCompile Include="OutputBox.cpp" />
+    <ClCompile Include="PeInfoPane.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
+    <ClCompile Include="ReferencesPane.cpp" />
+    <ClCompile Include="ReferenceTable.cpp" />
+    <ClCompile Include="RegistersPane.cpp" />
+    <ClCompile Include="RegistersView.cpp" />
+    <ClCompile Include="SearchDlg.cpp" />
+    <ClCompile Include="SettingsX.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DisasmPane.cpp" />
+    <ClCompile Include="StdTable.cpp" />
+    <ClCompile Include="TableVessel.cpp" />
+    <ClCompile Include="TraceConditionDlg.cpp" />
+    <ClCompile Include="TraceEdit.cpp" />
+    <ClCompile Include="TraceFileReader.cpp" />
+    <ClCompile Include="TrueColorToolBar.cpp" />
+    <ClCompile Include="Utils\CodeFolding.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Utils\Configuration.cpp" />
+    <ClCompile Include="Utils\EncodeMap.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Utils\MiscUtil.cpp" />
+    <ClCompile Include="Utils\RichTextPainter.cpp" />
+    <ClCompile Include="Utils\StringUtil.cpp" />
+    <ClCompile Include="WordEditDlg.cpp" />
+    <ClCompile Include="X.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="X.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="res\X.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\disabled.bmp" />
+    <Image Include="res\hot.bmp" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\normal.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\X.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bridge\bridge.vcxproj">
+      <Project>{8e1a59bc-d507-4fdf-a765-1a0c6de7d5bf}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="X.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
